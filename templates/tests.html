@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.98.0">
+  <title>Sample size tests</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+
+  <link href="static/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #sample{
+      margin-bottom: 2rem;
+      font-size: 19px;
+      text-align: center;
+    }
+
+    #sample2{
+      margin-bottom: 2rem;
+      font-size: 19px;
+      text-align: center;
+    }
+
+    #sample3{
+      margin-bottom: 2rem;
+      font-size: 19px;
+      text-align: center;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="static/cover.css" rel="stylesheet">
+</head>
+
+<body class="d-flex container-fluid text-white bg-dark">
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/mouse">Make the mouse randomization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" aria-current="page" href="/tests">Check sample size</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+
+
+    <main class="px-3" style="margin-top: 50px;">
+    <center>
+      <h2 class="display-5 fw-bold">Student's t-test</h2>
+    </center>
+      <div class="col-lg-6 mx-auto">
+        <p style="font-size: 20px; margin-Top:20px" align="justify">
+            This test is used in cases of quantitative analysis and when the number of groups used is equal to two.
+        </p>
+        <p style="font-size: 18px; margin-Top:20px" align="justify">This program considers an effect size of 0.8 by default. If no value is entered for
+        this parameter, the default will be considered.</p>
+
+
+        <div class="col-md-10 mx-auto">
+          <form class="p-4 p-md-5 rounded-3" id = 'input'>
+            <div class="form-floating mb-3">
+              <input type="number" min="0" step="0.01" class="form-control bg-dark text-white" id="effect_size"
+                placeholder="Complete name">
+              <label for="floatingPassword" style="color: #FFFFFF;">effect size: 0.8</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" min="0" max = "100" class="form-control bg-dark text-white" id="alpha" placeholder="Message">
+              <label for="floatingPassword" style="color: #FFFFFF;">alpha: 05%</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" min="0" max = "100" class="form-control bg-dark text-white" id="power" placeholder="Message">
+                <label for="floatingPassword" style="color: #FFFFFF;">power: 80%</label>
+              </div>
+            <button class="w-100 btn btn-lg" style="color: #37B8E7; border-color: #37B8E7; border-radius: 10px;"
+              type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+
+      <div id = "sample" class="text-warning">
+      </div>
+
+
+
+        <div class="container-fluid d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <center>
+          <h2 class="display-5 fw-bold">ANOVA test</h2>
+        </center>
+          <div class="col-lg-6 mx-auto">
+            <p style="font-size: 20px; margin-Top:20px" align="justify">
+                This test is used in cases of quantitative analysis and when the number of groups used is greater than two.
+            </p>
+    
+            <div class="col-md-10 mx-auto">
+              <form class="p-4 p-md-5 rounded-3" id = 'input2'>
+                <div class="form-floating mb-3">
+                  <input type="number" min="3" class="form-control bg-dark text-white" id="groups" placeholder="Message">
+                  <label for="floatingPassword" style="color: #FFFFFF;">Number of groups</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="number" min="0" max = "100" class="form-control bg-dark text-white" id="alpha2" placeholder="Message">
+                  <label for="floatingPassword" style="color: #FFFFFF;">alpha: 05%</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" min="0" max = "100" class="form-control bg-dark text-white" id="power2" placeholder="Message">
+                    <label for="floatingPassword" style="color: #FFFFFF;">power: 80%</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="number" min="0" step="0.01" class="form-control bg-dark text-white" id="effect_size2"
+                    placeholder="Complete name">
+                  <label for="floatingPassword" style="color: #FFFFFF;">effect size: 0.8</label>
+                </div>
+                <button class="w-100 btn btn-lg" style="color: #37B8E7; border-color: #37B8E7; border-radius: 10px;"
+                  type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+
+        <div id = "sample2" class="text-warning">
+        </div>
+
+
+
+        <div class="container-fluid d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <center>
+          <h2 class="display-5 fw-bold">Binomial test</h2>
+        </center> 
+          <div class="col-lg-6 mx-auto">
+            <p style="font-size: 20px; margin-Top:20px" align="justify">
+                This test is used in cases of qualitative analysis and when the number of groups used is equal to two.
+            </p>
+    
+            <div class="col-md-10 mx-auto">
+              <form class="p-4 p-md-5 rounded-3" id = 'input3'>
+                <div class="form-floating mb-3">
+                  <input type="number" min="0" max = "100" class="form-control bg-dark text-white" id="alpha3" placeholder="Message">
+                  <label for="floatingPassword" style="color: #FFFFFF;">alpha: 05%</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" min="0" max = "100"class="form-control bg-dark text-white" id="beta" placeholder="Message">
+                    <label for="floatingPassword" style="color: #FFFFFF;">power: 80% </label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="number" min="0" max = "100" class="form-control bg-dark text-white" id="erro" placeholder="Message">
+                  <label for="floatingPassword" style="color: #FFFFFF;">Error 20%</label>
+                </div>
+                <button class="w-100 btn btn-lg" style="color: #37B8E7; border-color: #37B8E7; border-radius: 10px;"
+                  type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        
+        <div id = "sample3" class="text-warning">
+        </div>
+        
+  
+  <script>
+    document.getElementById('input').addEventListener('submit', getData);
+  
+    function getData(e){
+        e.preventDefault();
+  
+        var name = document.getElementById('effect_size').value;
+        var quant1 = document.getElementById('alpha').value;
+        var quant2 = document.getElementById('power').value;
+        var params = {user_input:name, quant: quant1, quant2 : quant2}
+          
+        var xhr = new XMLHttpRequest();
+  
+        xhr.open('post', '../T', true);
+        xhr.setRequestHeader('Content-type','application/json')
+  
+        xhr.onload = function(){
+            document.getElementById('sample').innerHTML = this.responseText;
+        }
+  
+        xhr.send(JSON.stringify(params));
+    }
+  </script>
+
+
+  <script>
+    document.getElementById('input2').addEventListener('submit', getData);
+  
+    function getData(e){
+        e.preventDefault();
+  
+        var name = document.getElementById('effect_size2').value;
+        var quant1 = document.getElementById('alpha2').value;
+        var quant2 = document.getElementById('power2').value;
+        var groups = document.getElementById('groups').value;
+        var params = {user_input:name, quant: quant1, quant2 : quant2, groups: groups}
+          
+        var xhr = new XMLHttpRequest();
+  
+        xhr.open('post', '../anova', true);
+        xhr.setRequestHeader('Content-type','application/json')
+  
+        xhr.onload = function(){
+            document.getElementById('sample2').innerHTML = this.responseText;
+        }
+  
+        xhr.send(JSON.stringify(params));
+    }
+  </script>
+
+
+  <script>
+    document.getElementById('input3').addEventListener('submit', getData);
+  
+    function getData(e){
+        e.preventDefault();
+  
+        var quant1 = document.getElementById('alpha3').value;
+        var quant2 = document.getElementById('beta').value;
+        var erro = document.getElementById('erro').value;
+        var params = {quant: quant1, quant2 : quant2, erro: erro}
+          
+        var xhr = new XMLHttpRequest();
+  
+        xhr.open('post', '../binomial', true);
+        xhr.setRequestHeader('Content-type','application/json')
+  
+        xhr.onload = function(){
+            document.getElementById('sample3').innerHTML = this.responseText;
+        }
+  
+        xhr.send(JSON.stringify(params));
+    }
+  </script>
+
+  </main>
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

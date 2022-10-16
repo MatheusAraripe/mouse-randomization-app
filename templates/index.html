@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.98.0">
+  <title>Home</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+
+  <link href="static/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #grupos{
+      margin-bottom: 2rem;
+      font-size: 19px;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="static/cover.css" rel="stylesheet">
+</head>
+
+<body class=" text-white bg-dark">
+
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-warning" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/mouse">Make the mouse randomization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/tests">Check sample size</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="container-fluid d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+
+
+    <main class="px-3" style="margin-top: 25px;">
+      <img class="d-block mx-auto mb-4" src="static/Camundongo LCC.svg" alt="" width="200" height="200">
+      <center>
+      <h1 class="display-5 fw-bold">Mouse Randomization</h1>
+      <h2 class="display-8 fw-bold" style="color: #FFFFFF;">Simplifying animal randomization in research</h2>
+      </center>
+      <div class="col-lg-6 mx-auto">
+        <p style="font-size: 20px; margin-Top:20px" align="justify">
+          Poorly designed preclinical studies not only contribute to experimental
+          irreproducibility and wasted resources but also may result in erroneous
+          conclusions regarding the treatment effects, which can ultimately spur or deter
+          clinical trials in humans with the consequent risk of harm. Randomization is
+          seen as one of the crucial steps to enhance scientific rigor, decrease bias, and
+          increase the reliability and reproduction of studies with experimental animals.
+          Among internal validity criteria, randomization is a commonly recognized bias-
+          reducing instrument that needs to be considered when planning a study and is
+          to be reported when the study results are disclosed in a scientific publication.
+          In this context, we developed an app to assist researchers in the process
+          of randomization and organization of the animals in experimental groups. We
+          believe that this program will facilitate the researcher&#39;s organization and avoids
+          possible bias, thus increasing the credibility and reproducibility of the results
+          and also decreasing the misuse of animals.
+        </p>
+        <p style="font-size: 20px; margin-Top:20px" class="text-justify" align="justify">
+            If you still do not have the required sample size, this site offers the option of three tests to determine the sample size.
+            Student's t test: Used for quantitative analysis and when the number of groups is equal to two.
+            Binomial test: Used for qualitative analysis and when the number of groups is equal to two.
+            Anova test: used for quantitative analysis and when the number of groups is greater than two.
+        </p>
+        <p style="font-size: 20px; margin-Top:20px" align="justify">
+            All tests that this site supports are recommended only for samples that follow a normal distribution.
+        </p>
+        <p style='font-Size: 16px' class="mb-3 mb-md-0 text-warning" align="justify">
+          “Mouse randomization” is not responsible for any errors or omissions, or for the results obtained from the use of this software. This website works as a complementary tool for decision-making for research based on statistical calculations.  
+        </p>
+      </div>
+  </main>
+
+
+  <div class="container">
+  <footer class="d-flex flex-wrap align-items-center py-3 my-4 border-top">
+    <div>
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <span style='font-Size: 12px' class="mb-3 mb-md-0 text-white">Copyright &copy; 2022 MOUSE-RANDOMIZATION developed by Laboratory of Cellular Communication, Oswaldo Cruz Institute, Brazil. All rigths reserved under Creative Commons license.</span>
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    </div>
+
+  </footer>
+  </div>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

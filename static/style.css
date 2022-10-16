@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    bottom: 0;
+}
+
+body{
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: 2rem;
+}
+.titulo{
+    align-content: center;
+}
+
+.box{
+    align-content: center;
+    margin-bottom: 2rem;
+}
+.form{
+    align-items: center;
+    justify-items: center;   
+}
+.btn{
+    border-radius: 40px;
+    background-color: lightslategrey;
+    color: aliceblue;
+}
+
+.enviar{
+    justify-items: center; 
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 2rem;
+}
+
+#grupos{
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
