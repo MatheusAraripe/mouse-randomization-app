@@ -1,4 +1,4 @@
-# mouse-randomization-app
+# Mouse randomization app
 Poorly designed preclinical studies not only contribute to experimental
 irreproducibility and wasted resources but also may result in erroneous
 conclusions regarding the treatment effects, which can ultimately spur or deter
