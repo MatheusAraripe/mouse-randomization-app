@@ -11,7 +11,6 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 joblib==1.1.0
 kiwisolver==1.4.4
-lazy-loader==0.1rc2
 littleutils==0.2.2
 MarkupSafe==2.1.1
 matplotlib==3.5.2
