@@ -55,7 +55,7 @@ def T():
 
         sample_size = teste_t(effect_size,alpha,power)
 
-        resp = "The total sample size is "+ str(sample_size)
+        resp = "Sample size: {} animals in group 1 and {} animals in group 2".format(sample_size, sample_size)
 
         return resp
 
@@ -97,15 +97,13 @@ def binomial():
         return "Please enter valid values for the arguments!"
     else:
 
-        entrada_alpha = "0." + entrada_alpha
         alpha = float(entrada_alpha)
-        power = "0."+ power
         power = float(power)
-        erro = int(erro)
+        erro = float(erro)*100
         
         sample_size = binomial_sample_size(alpha,power,erro)
 
-        resp = "The total sample size is "+ str(round(sample_size))
+        resp = "Sample size: {} animals in group 1 and {} animals in group 2".format(int(sample_size/2), int(sample_size/2))
 
 
         return resp

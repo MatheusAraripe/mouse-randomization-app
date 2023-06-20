@@ -9,8 +9,8 @@ def teste_t(effect_size= 0.8,alpha=None,power=None):
     #alpha = 0.05 # significance level
     #power = 0.8
 
-    alpha = float("0."+alpha)
-    power = float("0."+power)
+    alpha = float(alpha)
+    power = float(power)
     
     
     sample_size = tt_ind_solve_power(effect_size = effect_size, alpha=alpha, power=power, ratio=1, alternative='two-sided')
@@ -19,14 +19,14 @@ def teste_t(effect_size= 0.8,alpha=None,power=None):
     #sample_size = power_analysis.solve_power(effect_size = effect_size, 
                                             #power = power, 
                                             #alpha = alpha)
-
-    return round(sample_size)*2
+    
+    return round(sample_size)
     
 def anova_sample_size(k, alpha, poder,f1=0.8):
 
 
-    poder = float("0."+poder)
-    alpha = float("0."+alpha)
+    poder = float(poder)
+    alpha = float(alpha)
     beta = 1-poder
 
     power = 0
