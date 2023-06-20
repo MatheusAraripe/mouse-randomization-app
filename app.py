@@ -70,18 +70,21 @@ def anova():
         effect_size = float(effect_size)
 
     alpha = (request.json['quant'])
-    poder_teste = (request.json['quant2'])
+    power = (request.json['quant2'])
     n_groups = (request.json['groups'])
 
-    if alpha == "" or poder_teste == "":
+    if alpha == "" or power == "":
         return "Please enter valid values for the arguments!"
     else:
 
+        alpha = float(alpha)
+        power = float(power)
+
         n_groups=int(n_groups)
         
-        sample_size = anova_sample_size(n_groups,alpha,poder_teste,effect_size)
+        sample_size = anova_sample_size(effect_size, alpha, power, n_groups)
 
-        resp = "The total sample size is "+ str(sample_size)
+        resp = f"Sample size per group: {str(sample_size)}  Total sample size {sample_size*n_groups}"
 
         return resp
 
