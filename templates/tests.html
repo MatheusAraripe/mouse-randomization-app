@@ -161,7 +161,7 @@
             <p style="font-size: 20px; margin-Top:20px" align="justify">
                 This test is used in cases of quantitative analysis and when the number of groups used is greater than two.
             </p>
-    
+
             <div class="col-md-10 mx-auto">
               <form class="p-4 p-md-5 rounded-3" id = 'input2'>
                 <div class="form-floating mb-3">
@@ -187,7 +187,7 @@
             </div>
           </div>
         </div>
-      
+
 
         <div id = "sample2" class="text-warning">
         </div>
@@ -197,12 +197,12 @@
         <div class="container-fluid d-flex w-100 h-100 p-3 mx-auto flex-column">
         <center>
           <h2 class="display-5 fw-bold">Binomial test</h2>
-        </center> 
+        </center>
           <div class="col-lg-6 mx-auto">
             <p style="font-size: 20px; margin-Top:20px" align="justify">
                 This test is used in cases of qualitative analysis and when the number of groups used is equal to two.
             </p>
-    
+
             <div class="col-md-10 mx-auto">
               <form class="p-4 p-md-5 rounded-3" id = 'input3'>
                 <div class="form-floating mb-3">
@@ -214,8 +214,8 @@
                     <label for="floatingPassword" style="color: #e6e6e665;">power: 0.8</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input type="number" min="0" step="0.01"  class="form-control bg-dark text-white" id="erro" placeholder="Message">
-                  <label for="floatingPassword" style="color: #e6e6e665;">Error 0.2</label>
+                  <input type="number" min="0" max="100"  class="form-control bg-dark text-white" id="erro" placeholder="Message">
+                  <label for="floatingPassword" style="color: #e6e6e665;">Error: 20%</label>
                 </div>
                 <button class="w-100 btn btn-lg" style="color: #37B8E7; border-color: #37B8E7; border-radius: 10px;"
                   type="submit">Submit</button>
@@ -224,31 +224,31 @@
           </div>
         </div>
 
-        
+
         <div id = "sample3" class="text-warning">
         </div>
-        
-  
+
+
   <script>
     document.getElementById('input').addEventListener('submit', getData);
-  
+
     function getData(e){
         e.preventDefault();
-  
+
         var name = document.getElementById('effect_size').value;
         var quant1 = document.getElementById('alpha').value;
         var quant2 = document.getElementById('power').value;
         var params = {user_input:name, quant: quant1, quant2 : quant2}
-          
+
         var xhr = new XMLHttpRequest();
-  
+
         xhr.open('post', '../T', true);
         xhr.setRequestHeader('Content-type','application/json')
-  
+
         xhr.onload = function(){
             document.getElementById('sample').innerHTML = this.responseText;
         }
-  
+
         xhr.send(JSON.stringify(params));
     }
   </script>
@@ -256,25 +256,25 @@
 
   <script>
     document.getElementById('input2').addEventListener('submit', getData);
-  
+
     function getData(e){
         e.preventDefault();
-  
+
         var name = document.getElementById('effect_size2').value;
         var quant1 = document.getElementById('alpha2').value;
         var quant2 = document.getElementById('power2').value;
         var groups = document.getElementById('groups').value;
         var params = {user_input:name, quant: quant1, quant2 : quant2, groups: groups}
-          
+
         var xhr = new XMLHttpRequest();
-  
+
         xhr.open('post', '../anova', true);
         xhr.setRequestHeader('Content-type','application/json')
-  
+
         xhr.onload = function(){
             document.getElementById('sample2').innerHTML = this.responseText;
         }
-  
+
         xhr.send(JSON.stringify(params));
     }
   </script>
@@ -282,24 +282,24 @@
 
   <script>
     document.getElementById('input3').addEventListener('submit', getData);
-  
+
     function getData(e){
         e.preventDefault();
-  
+
         var quant1 = document.getElementById('alpha3').value;
         var quant2 = document.getElementById('beta').value;
         var erro = document.getElementById('erro').value;
         var params = {quant: quant1, quant2 : quant2, erro: erro}
-          
+
         var xhr = new XMLHttpRequest();
-  
+
         xhr.open('post', '../binomial', true);
         xhr.setRequestHeader('Content-type','application/json')
-  
+
         xhr.onload = function(){
             document.getElementById('sample3').innerHTML = this.responseText;
         }
-  
+
         xhr.send(JSON.stringify(params));
     }
   </script>

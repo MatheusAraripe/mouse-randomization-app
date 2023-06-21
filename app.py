@@ -31,9 +31,9 @@ def random():
     cont = 0
     resp = ""
     for e in groups_list:
-        resp = resp + " --- " + "group " + str(cont+1) + ": " + str(e) 
+        resp = resp + " --- " + "group " + str(cont+1) + ": " + str(e)
         cont += 1
-    
+
     return resp
 
 
@@ -81,17 +81,17 @@ def anova():
         power = float(power)
 
         n_groups=int(n_groups)
-        
+
         sample_size = anova_sample_size(effect_size, alpha, power, n_groups)
 
-        resp = f"Sample size per group: {str(sample_size)}  Total sample size {sample_size*n_groups}"
+        resp = f"Sample size per group: {str(sample_size)}  <br/>Total sample size: {sample_size*n_groups}"
 
         return resp
 
 
 @app.route("/binomial", methods = ["POST"])
 def binomial():
-    
+
     entrada_alpha = (request.json['quant'])
     power = (request.json['quant2'])
     erro = (request.json['erro'])
@@ -102,13 +102,13 @@ def binomial():
 
         alpha = float(entrada_alpha)
         power = float(power)
-        erro = float(erro)*100
-        
+        erro = int(erro)
+
         sample_size = binomial_sample_size(alpha,power,erro)
 
         resp = "Sample size: {} animals in group 1 and {} animals in group 2".format(int(sample_size/2), int(sample_size/2))
 
 
         return resp
-        
+
 #app.run(debug=True)
