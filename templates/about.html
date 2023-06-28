@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.98.0">
+  <title>Home</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+
+  <link href="static/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #grupos{
+      margin-bottom: 2rem;
+      font-size: 19px;
+    }
+
+    .image-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    border-radius: 8px;
+    background-color: white;
+    margin-top: 8px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    .about-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .about3{
+      margin-top: 50px;
+      height: 300px;
+      border-radius: 8px;
+    }
+    .mouse-about-iamge{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      border-radius: 8px;
+      background-color: white;
+      margin-top: 8px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      margin-bottom: 30px;
+    }
+    .about6{
+      height: 500px;
+      width: 400px;
+      border-radius: 8px;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="static/cover.css" rel="stylesheet">
+</head>
+
+<body class=" text-white bg-dark">
+
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand active" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/mouse">Mouse randomization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/tests">Check sample size</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" aria-current="page" href="/about">Theoretical considerations</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="container-fluid d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+    <main class="px-3" style="margin-top: 25px;">
+      <center>
+      <h1 class="display-5 fw-bold mt-4">Theoretical considerations</h1>
+      <h2 class="display-8 fw-bold mt-5" style="color: #FFFFFF;">Level of significance</h2>
+      </center>
+      <div class="col-lg-6 mx-auto about-body">
+        <p style="font-size: 20px; margin-Top:20px" align="justify">
+          Hypothesis Testing is a way to test an idea or an assumption using data. It involves making two hypotheses: the Null Hypothesis (H0) and the Alternative Hypothesis (H1). The null hypothesis is usually a statement that there is no relationship between two variables or no difference between two groups. The alternative hypothesis is the opposite of the null hypothesis and represents the idea or assumption that you want to test. After collecting data you perform a statistical test to see if the data supports the null hypothesis or the alternative hypothesis. If the data provides enough evidence against the null hypothesis, you reject it and conclude that the alternative hypothesis is true. The level of significance is the probability, chosen by the user, that leads to the conclusion of the hypothesis test in favor of the alternative hypothesis (H1). Generally, we choose a very small level of significance, such as 5%, 2.5% or 1% of the total area under the probability density curve. For example, by choosing a 5% level of significance we are delimiting a region on the distribution curve in which, if H0 is true, we have a 5% chance of obtaining sample results falling within that area.
+        </p>
+        <div class="image-about">
+          <img src="../static/level_signific_1.png" alt="">
+        </div>
+        <p style="font-size: 20px; margin-Top:20px" align="justify">
+          HypothThe significance level is the probability of rejecting the null hypothesis when it is true. Since this probability is very small, obtaining sample results in this area is a good indication that the null hypothesis may not be true. The researcher must choose the significance level before conducting the experiment. We can use the following comparison to have a better intuition of H0 and H1. In a court of law, the defendant is assumed to be innocent until proven guilty. This is similar to the null hypothesis in hypothesis testing which assumes that there is no relationship between two variables or no difference between two groups until there is enough evidence to suggest otherwise. esis Testing is a way to test an idea or an assumption using data. It involves making two hypotheses: the Null Hypothesis (H0) and the Alternative Hypothesis (H1). The null hypothesis is usually a statement that there is no relationship between two variables or no difference between two groups. The alternative hypothesis is the opposite of the null hypothesis and represents the idea or assumption that you want to test. After collecting data you perform a statistical test to see if the data supports the null hypothesis or the alternative hypothesis. If the data provides enough evidence against the null hypothesis, you reject it and conclude that the alternative hypothesis is true. The level of significance is the probability, chosen by the user, that leads to the conclusion of the hypothesis test in favor of the alternative hypothesis (H1). Generally, we choose a very small level of significance, such as 5%, 2.5% or 1% of the total area under the probability density curve. For example, by choosing a 5% level of significance we are delimiting a region on the distribution curve in which, if H0 is true, we have a 5% chance of obtaining sample results falling within that area.
+        </p>
+        <div class="image-about">
+          <img src="../static/level_signific_2.png" alt="">
+        </div>
+        <p style="font-size: 20px; margin-Top:20px" align="justify">
+          Just as a prosecutor must present evidence to prove the defendant’s guilt beyond a reasonable doubt, a researcher must collect data and perform a statistical test to determine if there is enough evidence to reject the null hypothesis. If the evidence is strong enough, the null hypothesis is rejected and the alternative hypothesis is accepted, just as a defendant may be found guilty if the evidence against them is strong enough. 
+        </p>
+        <center>
+          <h2 class="display-8 fw-bold mt-5" style="color: #FFFFFF;">The power of a hypothesis test</h2>
+        </center>
+        <p style="font-size: 20px; margin-Top:20px" align="justify">
+          The power of a hypothesis test is how likely you are to avoid a type II error. The type 2 error is represented by the letter beta (β) which occurs when the statistical analysis of the data fails to reject a hypothesis, in case this hypothesis is false. In other words, it is how likely you are to say that your first guess is wrong when your second guess is right. The power of a test depends on some factors, such as how many times you try something, how big the difference is between the two guesses, and how sure you want to be. The power of a test can be from 0 to 1. A higher power means a lower chance of a type II error. A lower power means a higher chance of a type II error. You want a test with high power to ensure that your results are not just by chance. The power of a hypothesis test is obtained by subtracting the value of the Beta error from the total area under the probability density curve. Since the Type II error is the probability of not rejecting H0 when it is false, the power of the test represents the probability of correctly not rejecting H0. Therefore, if we have a Beta error value of 6%, the power of the test will be 94%. This means that we have a 6% probability of not rejecting H0 when we should have rejected it and a 94% probability of correctly rejecting H0.
+        </p>
+        <div >
+          <img src="../static/about3.png" alt="" class="about3">
+        </div>
+        <div >
+          <img src="../static/about4.png" alt="" class="about3">
+        </div>
+        <center>
+          <h2 class="display-8 fw-bold mt-5" style="color: #FFFFFF;">The effect size</h2>
+        </center>
+        <p style="font-size: 20px; margin-Top:20px" align="justify">
+          The effect size is useful because it can help you to understand if a difference is important or not. Sometimes a difference can be very small and insignificant in real life. Other times, a difference can be very large and have a big impact. The effect size can help you to decide if a difference is worth paying attention to or not. There are different ways to calculate the effect size, depending on what you are comparing. Some common ways are Cohen’s d and Pearson’s r. Cohen’s d tells you how many standard deviations apart from the means of two groups are. Pearson’s r tells you how strong the relationship between two variables is. The effect size can range from 0 to 1 or more. A higher effect size means a bigger difference or a stronger relationship. 
+          <br>
+          The effect size is one of the statistics'resource that can be used to support the conclusions of hypothesis tests. In some cases the significance level alone is insufficient for assessing the practical significance of a given effect. It is not uncommon for an experiment to yield high statistical significance but lack meaningful experimental significance. In such cases it is important to utilize another statistic that complements the hypothesis test by evaluating the significance of observed differences in effects. In our program the "Cohen's d" assesses the magnitude of the difference between observed effects related to the combined standard deviation of each system. This enables the derivation of four possible outcomes: (1) the hypothesis test exhibits high statistical significance and the differences between systems are experimentally significant; (2) the hypothesis test demonstrates high statistical significance but the system differences are not experimentally significant; (3) the hypothesis test lacks statistical significance yet the system differences are experimentally significant; and finally, (4) the hypothesis test lacks statistical significance and the system differences are not experimentally significant. 
+        </p>
+        <div >
+          <img src="../static/about5.png" alt="" class="about3">
+        </div>
+        <center>
+          <h2 class="display-8 fw-bold mt-5" style="color: #FFFFFF;">Randomization</h2>
+        </center>
+        <p style="font-size: 20px; margin-Top:20px" align="justify">
+          Randomization means that things happen by chance and not by a plan. For example, if you flip a coin, you do not know if it will be heads or tails. That is a random thing. A random sequence is a series of things that have no order or pattern. When performing an experiment with animals many variables must be controlled in order to ensure that the experimental results are not biased or invalidated. Some of these variables are: weight of the animal, age, litter, hues, etc. 
+          <br>
+          Although these variables, and many others, are under strict control by the researcher, we cannot guarantee that all animals are statistically equal. So that a trend effect is not observed in relation to this or that batch of animals it is important that the studies are developed with the random choice of animals, seeking to reduce the experimental bias that may be present and unnoticed by the researcher.
+        </p>
+        <div class="mouse-about-iamge">
+          <img src="../static/about6.png" alt="" class="about6">
+        </div>
+      </div>
+  </main>
+
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
