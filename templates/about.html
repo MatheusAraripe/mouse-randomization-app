@@ -80,6 +80,15 @@
     margin-top: 8px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     }
+    .image-about-big{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      border-radius: 8px;
+      margin-top: 8px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
     .about-body{
       display: flex;
       flex-direction: column;
@@ -87,7 +96,6 @@
       align-items: center;
     }
     .about3{
-      margin-top: 50px;
       height: 300px;
       border-radius: 8px;
     }
@@ -105,8 +113,44 @@
     .about6{
       height: 500px;
       width: 400px;
-      border-radius: 8px;
     }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 768px) {
+    .about3{
+      width: 100%;
+    }
+
+    .about6{
+      height: 400px;
+      width: 300px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .about3{
+      height: 200px;
+    }
+
+    .about6{
+      height: 300px;
+      width: 200px;
+    }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    .about3{
+      height: 150px;
+    }
+
+    .about6{
+      height: 275px;
+      width: 175px;
+    }
+  }
+
+
   </style>
 
 
@@ -170,10 +214,10 @@
         <p style="font-size: 20px; margin-Top:20px" align="justify">
           The power of a hypothesis test is how likely you are to avoid a type II error. The type 2 error is represented by the letter beta (β) which occurs when the statistical analysis of the data fails to reject a hypothesis, in case this hypothesis is false. In other words, it is how likely you are to say that your first guess is wrong when your second guess is right. The power of a test depends on some factors, such as how many times you try something, how big the difference is between the two guesses, and how sure you want to be. The power of a test can be from 0 to 1. A higher power means a lower chance of a type II error. A lower power means a higher chance of a type II error. You want a test with high power to ensure that your results are not just by chance. The power of a hypothesis test is obtained by subtracting the value of the Beta error from the total area under the probability density curve. Since the Type II error is the probability of not rejecting H0 when it is false, the power of the test represents the probability of correctly not rejecting H0. Therefore, if we have a Beta error value of 6%, the power of the test will be 94%. This means that we have a 6% probability of not rejecting H0 when we should have rejected it and a 94% probability of correctly rejecting H0.
         </p>
-        <div >
+        <div class="image-about-big">
           <img src="../static/about3.png" alt="" class="about3">
         </div>
-        <div >
+        <div class="image-about-big">
           <img src="../static/about4.png" alt="" class="about3">
         </div>
         <center>
@@ -184,7 +228,7 @@
           <br>
           The effect size is one of the statistics'resource that can be used to support the conclusions of hypothesis tests. In some cases the significance level alone is insufficient for assessing the practical significance of a given effect. It is not uncommon for an experiment to yield high statistical significance but lack meaningful experimental significance. In such cases it is important to utilize another statistic that complements the hypothesis test by evaluating the significance of observed differences in effects. In our program the "Cohen's d" assesses the magnitude of the difference between observed effects related to the combined standard deviation of each system. This enables the derivation of four possible outcomes: (1) the hypothesis test exhibits high statistical significance and the differences between systems are experimentally significant; (2) the hypothesis test demonstrates high statistical significance but the system differences are not experimentally significant; (3) the hypothesis test lacks statistical significance yet the system differences are experimentally significant; and finally, (4) the hypothesis test lacks statistical significance and the system differences are not experimentally significant. 
         </p>
-        <div >
+        <div class="image-about-big">
           <img src="../static/about5.png" alt="" class="about3">
         </div>
         <center>
